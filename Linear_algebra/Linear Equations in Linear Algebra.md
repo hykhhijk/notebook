@@ -21,7 +21,6 @@ Elementary row operations: 아래 3가지 연산을 통해 A 행렬을 B로 만�
 # 1.2 Row Reduction and Echelon Forms
 
 Leading entry of row: 특정행에서 제일 왼쪽에 있는 non-zero entry  
-![image.png](attachment:image.png)
 
 Echelon form: 아래 두가지 조건을 만족하는 형태의 행렬을 의미
 1. 모든 nonzero 행이 all zero 보다 위에 있으며
@@ -40,7 +39,7 @@ Each matrix is row equivalent to one and only one reduced echelon matrix.
 각 행렬을 reduced echelon form으로 행연산할시 unique하다.
 
 general solution: basic variable과 free variable로 표현된 식 형태를 말한다.  
-![image.png](attachment:image.png)  
+
 m * n행렬이 있을때 n이 커질수록 free variable이 많아진다.
 
 ## Theorem 2
@@ -54,7 +53,7 @@ consistent한 경우에 free V가 있다면 -> infinitely many solution을
 Linear combination: 아래처럼 보이는 식을 말한다
 $$ y = c_1\mathbf{v_1} + c_2\mathbf{v_2} + ... + c_n\mathbf{v_n}$$ 
 means linear combination of $\mathbf{v_1}, \mathbf{v_2}, ..., \mathbf{v_n}$ with weights $c_1, c_2, ..., c_p$  
-*vector equation이라는 표현이 이후 자주 쓰이지는 않는다 Linear combination이 특정 해를 만족하는 solution을 찾는 느낌이고 vector equation은 공간을 표현하는데 더 자주 쓰이는 느낌이다*
+vector equation이라는 표현이 이후 자주 쓰이지는 않는다 Linear combination이 특정 해를 만족하는 solution을 찾는 느낌이고 vector equation은 공간을 표현하는데 더 자주 쓰이는 느낌이다
 
 span: 주어진 벡터를 이용해 만들 수 있는 모든 벡터의 집합
 
@@ -63,7 +62,7 @@ span: 주어진 벡터를 이용해 만들 수 있는 모든 벡터의 집합
  \mathbf{v_1}&\mathbf{v_2}  &\mathbf{v_3} 
 \end{Bmatrix}$
 
-2. Does the following vecotr equation have a solution?  
+2. Does the following vector equation have a solution?  
 $$x_1\mathbf{v_1} + x_2\mathbf{v_2} + x_3\mathbf{v_3} = \mathbf{b}$$
 
 3. Does the following augmented matrix have a solution?
@@ -86,7 +85,7 @@ x_3
 $\mathbf{a}$가 벡터라는 점을 주의, 위 식은 x를 weight로 가지는 A의 linear combination으로 볼 수 있다.  
 **x와 A위치가 바뀌면 안된다!**
 
-위에서 3번 식에 있는 augmented matrix 예제는 A가 v를 벡터로 가지는 matrix equation과 같은 form이라고 볼 수 있다.
+위에서 3번 식(Does the following augmented matrix have a solution?)에 있는 augmented matrix 예제는 A가 v를 벡터로 가지는 matrix equation과 같은 form이라고 볼 수 있다. 물론 다른 항목도 비슷하게 생각할 수 있다.
 $$\begin{bmatrix}
  \mathbf{v_1}&\mathbf{v_2}  &\mathbf{v_3} &\mathbf{b}  
 \end{bmatrix}$$
@@ -94,7 +93,7 @@ $$\begin{bmatrix}
 
 
 ## Theorem3
-위의 리스트에서 행렬식만 추가하면 된다
+위쪽의 리스트에서 행렬식만 추가하면 된다
 1. Is a vector $\mathbf{b}$ in Span $\begin{Bmatrix}
  \mathbf{v_1}&\mathbf{v_2}  &\mathbf{v_3} 
 \end{Bmatrix}$
@@ -113,7 +112,7 @@ $$ A\mathbf{x} = \mathbf{b}$$
 ## Theorem5  
 $$A(\mathbf{u} + \mathbf{v}) = A\mathbf{u} + A\mathbf{v}$$
 $$A(c\mathbf{u}) = c(A\mathbf{u})$$
-첫번째 식은 두 벡터와 행렬의 연산을 간단히하는데 자주 나오므로 확실히 알고가야한다  
+첫번째 식은 두 벡터와 행렬의 연산을 간단히하는데 자주 나오므로 확실히 알고가야한다.  
 
 # 1.6 Linear Independence
 
@@ -136,10 +135,11 @@ $x_1\mathbf{v_1} + ... + x_3\mathbf{v_p} = 0$
 
 ## Theorem 8
 벡터 셋이 entry(벡터의 원소 수 = 행)보다 많은 벡터를 가지고 있다면 선형 종속이다.  
-![image.png](attachment:image.png)  
+![alt text](image-2.png)  
+
 이러한 케이스를 말하는 건데  
-- p의 개수에 따라 이 식은 $\mathbb{R}^p$ space를 span 할 수 있을것이다(vector간 multiple이 아니라면) 즉 p의 개수가 n보다 커지게 되면 $\mathbb{R}^n$을 span하게 된다.  
-- p의 개수가 n보다 커지면 reduced echelon form으로 만들면 free variable이 존재하게 되며 이는 Ax=0를 만족시킨다
+- p의 개수에 따라 이 식은 $\mathbb{R}^p$ space를 span 할 수 있을것이다(vector간 multiple이 아니라면), 만약 p의 개수가 n보다 커지게 되면 $\mathbb{R}^n$을 span하게 된다.  
+- p의 개수가 n보다 커지면 reduced echelon form으로 만들면 free variable이 존재하게 되며 이는 Ax=0를 만족시킨다(not trivial solution)
 
 ## Theorem 9
 vector set이 0벡터를 포함하면 무조건 선형 종속이다.
@@ -148,7 +148,7 @@ vector set이 0벡터를 포함하면 무조건 선형 종속이다.
 
 Transformation: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 function $T$
 
-자주 사용하는 식 $ A\mathbf{x} = \mathbf{b}$ 를 봤을때 A[m x n], x[n, 1] 일때 b[m, 1]로 바뀐다.
+자주 사용하는 식 $A\mathbf{x} = \mathbf{b}$ 를 봤을때 A[m x n], x[n, 1] 일때 b[m, 1]로 바뀐다.(이건 A의 관점이 아니라 x의 관점에서 Transformation이 일어난 것이다)
 
 ## Linear transformation
 $T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})$  
@@ -156,22 +156,21 @@ $T(c\mathbf{u}) = cT(\mathbf{u})$
 이 두조건을 만족하는 mapping $T$를 Linear transformation이라 한다.(이러한 성질을 **closed under addition and multiplication** 혹은 Linear한 성질을 지녔다고한다.)
 
 # 1.8 The Matrix of a Linear Transformation
-
 항등행렬 표기법: 
 
-$ I_2 = \begin{bmatrix}
+$I_2 = \begin{bmatrix}
 1 &0 \\ 
  0&1 
-\end{bmatrix}$ 의 각 column vector를 $ e_1 = \begin{bmatrix}
+\end{bmatrix}$ 의 각 column vector를 $e_1 = \begin{bmatrix}
 1\\0 
-\end{bmatrix} $ 과 $ e_2 = \begin{bmatrix}
+\end{bmatrix}$ 과 $e_2 = \begin{bmatrix}
 0\\1 
-\end{bmatrix} $로 표기한다.
+\end{bmatrix}$로 표기한다.
 
 ## Theorem 10
 $T(\mathbf{x}) = A\mathbf{x}$ 는 모든 x에 대해 Unique하다.  
 
-T는 Linear tranformation, A는 m*n 행렬이며 A는 아래와 같이 표현된다.  
+T는 Linear tranformation, A는 m*n 행렬이며 A는 아래와 같이 표현될 수 있다.  
 $A = [T(\mathbf{e_1}) ... T(\mathbf{e_n})]$  
 Linear transformation T에 대한 standard matrix로 표기한다.
 
@@ -179,12 +178,10 @@ $A\mathbf{x}$ 를 예로 들어 풀어쓰면
 T는 $T = [T(\mathbf{e_1}) ... T(\mathbf{e_n})]$ 형태로 표현할 수 있고 $T\mathbf{(x)}$ 는 $[T(\mathbf{e_1}) ... T(\mathbf{e_n})]x$ 이다.  
 그리고 이 결과는 $A\mathbf{x}$와 같다. 즉, Transformation matrix는 identity matrix의 컬럼을 transformation한 벡터를 컬럼으로 사용한다는 뜻이다.
 
-그림으로 보면 성질이 한번에 보인다.  
-![image.png](attachment:image.png)  
 항등행렬의 column은 연산하는 행렬의 특정column으로 transform된다 즉 column을 그대로 유지한다.
 
-onto: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 $T$ 가 n차원 x를 m차원 b로 보내는 해가 최소한 하나라도 있는 경우(어떠한 b라도)  
-one-to-one: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 $T$ 가 n차원 x를 m차원 b로 보내는 해가 **단 하나**인 경우  
+onto $\mathbb{R}^m$: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 $T$ 가 n차원 x를 m차원 b로 보내는 해가 최소한 하나라도 있는 경우(어떠한 b라도)  
+one-to-one: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 $T$ 가 n차원 x를 m차원 b로 보내는 해가 단 하나거나 없는 경우  
 
 *one to one의 정의는 정의역, 치역의 원소들이 1:1로 mapping되야 한다. 즉! free variable이 존재하면 이 조건을 무조건 위반하게된다.*
 
@@ -192,7 +189,8 @@ one-to-one: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 $T$ 가 n차원 x
 $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 linear formation $T$는 trivial solution을 가질때에 one-to-one이다.
 
 ## Theorem 12  
-$\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 linear formation $T$ standard matrix A의 column이 $\mathbb{R}^m$을 span할때 onto한다.  
-그리고 $T$ 는 A가 선형독립일때 one-to-one이다.
+$\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 linear formation $T$ 와 이의 standard matrix A가 있을때
 
-*위줄은 정리3을 아래는 정리 6을 보면 쉽게 유추 가능하다.*
+- A의 column이 $\mathbb{R}^m$을 span할때 T는 $\mathbb{R}^n$ onto $\mathbb{R}^m$ 이다.
+
+- 그리고 $T$ 는 A가 선형독립일때 one-to-one이다. (cause only trivial solution)

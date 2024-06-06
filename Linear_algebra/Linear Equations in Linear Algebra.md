@@ -32,8 +32,7 @@ Reduced echelon form: 위에 2개에 추가적으로 2개 조건을 필요로한
 
 reduced echelon form의 leading entry위치를 pivot position이라한다.
 
-## Theorem 1 
-**Uniquness of the Reduced Echelon Form**  
+## Theorem 1. Uniquness of the Reduced Echelon Form  
 Each matrix is row equivalent to one and only one reduced echelon matrix.
 
 각 행렬을 reduced echelon form으로 행연산할시 unique하다.
@@ -42,9 +41,8 @@ general solution: basic variable과 free variable로 표현된 식 형태를 말
 
 m * n행렬이 있을때 n이 커질수록 free variable이 많아진다.
 
-## Theorem 2
-**Existence and Uniqueness Theorem**  
-augmented matrix의 right most column이 nonzero라면 inconsistent하다.  
+## Theorem 2. Existence and Uniqueness Theorem  
+augmented matrix의 right most column만 nonzero라면(pivot column) inconsistent하다.  
 consistent한 경우에 free V가 있다면 -> infinitely many solution을  
 그렇지 않다면 -> unique solution을 가진다.
 
@@ -52,7 +50,7 @@ consistent한 경우에 free V가 있다면 -> infinitely many solution을
 
 Linear combination: 아래처럼 보이는 식을 말한다
 $$ y = c_1\mathbf{v_1} + c_2\mathbf{v_2} + ... + c_n\mathbf{v_n}$$ 
-means linear combination of $\mathbf{v_1}, \mathbf{v_2}, ..., \mathbf{v_n}$ with weights $c_1, c_2, ..., c_p$  
+means linear combination of $\mathbf{v_1}, \mathbf{v_2}, ..., \mathbf{v_n}$ with weights $c_1, c_2, ..., c_n$  
 vector equation이라는 표현이 이후 자주 쓰이지는 않는다 Linear combination이 특정 해를 만족하는 solution을 찾는 느낌이고 vector equation은 공간을 표현하는데 더 자주 쓰이는 느낌이다
 
 span: 주어진 벡터를 이용해 만들 수 있는 모든 벡터의 집합
@@ -85,11 +83,6 @@ x_3
 $\mathbf{a}$가 벡터라는 점을 주의, 위 식은 x를 weight로 가지는 A의 linear combination으로 볼 수 있다.  
 **x와 A위치가 바뀌면 안된다!**
 
-위에서 3번 식(Does the following augmented matrix have a solution?)에 있는 augmented matrix 예제는 A가 v를 벡터로 가지는 matrix equation과 같은 form이라고 볼 수 있다. 물론 다른 항목도 비슷하게 생각할 수 있다.
-$$\begin{bmatrix}
- \mathbf{v_1}&\mathbf{v_2}  &\mathbf{v_3} &\mathbf{b}  
-\end{bmatrix}$$
-
 
 
 ## Theorem3
@@ -115,7 +108,6 @@ $$A(c\mathbf{u}) = c(A\mathbf{u})$$
 첫번째 식은 두 벡터와 행렬의 연산을 간단히하는데 자주 나오므로 확실히 알고가야한다.  
 
 # 1.6 Linear Independence
-
 $A\bf{x} = 0$을 homogeneous system이라고 한다. 이 식은 무조건 하나 이상의 솔루션(trivial solution)을 가진다.
 
 - 이러한 Linear combination "$x_1\mathbf{v_1} + ... + x_p\mathbf{v_p} = 0$" 을 만족하는 식 중 **trivial solution만**을 가지는 vector set을 linearly independent하다고 말한다.  
@@ -135,10 +127,9 @@ $x_1\mathbf{v_1} + ... + x_3\mathbf{v_p} = 0$
 
 ## Theorem 8
 벡터 셋이 entry(벡터의 원소 수 = 행)보다 많은 벡터를 가지고 있다면 선형 종속이다.  
-![alt text](image-2.png)  
-
+![alt text](image/image-4.png)  
 이러한 케이스를 말하는 건데  
-- p의 개수에 따라 이 식은 $\mathbb{R}^p$ space를 span 할 수 있을것이다(vector간 multiple이 아니라면), 만약 p의 개수가 n보다 커지게 되면 $\mathbb{R}^n$을 span하게 된다.  
+- p의 개수에 따라 이 식은 $\mathbb{R}^p$ space를 span 할 수 있을것이다(vector간 multiple이 아니라면), p의 개수가 n보다 커지게 되면 $\mathbb{R}^n$을 span하게 된다.  
 - p의 개수가 n보다 커지면 reduced echelon form으로 만들면 free variable이 존재하게 되며 이는 Ax=0를 만족시킨다(not trivial solution)
 
 ## Theorem 9
@@ -148,7 +139,7 @@ vector set이 0벡터를 포함하면 무조건 선형 종속이다.
 
 Transformation: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 function $T$
 
-자주 사용하는 식 $A\mathbf{x} = \mathbf{b}$ 를 봤을때 A[m x n], x[n, 1] 일때 b[m, 1]로 바뀐다.(이건 A의 관점이 아니라 x의 관점에서 Transformation이 일어난 것이다)
+자주 사용하는 식 $A\mathbf{x} = \mathbf{b}$ 를 봤을때 A[m * n], x[n * 1] 일때 b[m * 1]로 바뀐다.(이건 A의 관점이 아니라 x의 관점에서 Transformation이 일어난 것이다)
 
 ## Linear transformation
 $T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})$  
@@ -183,13 +174,13 @@ T는 $T = [T(\mathbf{e_1}) ... T(\mathbf{e_n})]$ 형태로 표현할 수 있고 
 onto $\mathbb{R}^m$: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 $T$ 가 n차원 x를 m차원 b로 보내는 해가 최소한 하나라도 있는 경우(어떠한 b라도)  
 one-to-one: $\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 $T$ 가 n차원 x를 m차원 b로 보내는 해가 단 하나거나 없는 경우  
 
-*one to one의 정의는 정의역, 치역의 원소들이 1:1로 mapping되야 한다. 즉! free variable이 존재하면 이 조건을 무조건 위반하게된다.*
+- onto가 one to one의 필요조건임
 
 ## Theorem 11
-$\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 linear formation $T$는 trivial solution을 가질때에 one-to-one이다.
+$\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 linear transform $T$는 trivial solution을 가질때에 one-to-one이다.
 
 ## Theorem 12  
-$\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 linear formation $T$ 와 이의 standard matrix A가 있을때
+$\mathbb{R}^n$ 을 $\mathbb{R}^m$ 으로 보내는 linear transform $T$ 와 이의 standard matrix A가 있을때
 
 - A의 column이 $\mathbb{R}^m$을 span할때 T는 $\mathbb{R}^n$ onto $\mathbb{R}^m$ 이다.
 

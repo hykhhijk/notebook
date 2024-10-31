@@ -61,5 +61,23 @@ $F_X(x) = P(X \leq x), \text{ for all } x \in \mathbb{R}.$
 $E[X] = \sum_{x_k \in R_X} x_k P(X = x_k)$ 즉 $x_k P_X(x_k)$
 
 ### PMF들의 E[X]
-**Bernoulli(p): p,  Geometric(p): $\frac{1}{p}$,  Poisson(λ): $\lambda e^{-\lambda} e^{\lambda}$**
+**Bernoulli(p): p,  Geometric(p): $\frac{1}{p}$,  Poisson(λ): $\lambda e^{-\lambda} e^{\lambda}$**  
 **Binomial(n, p): $np$, Pascal(m, p): $\frac{m}{p}$, Hypergeometric(b, r, n): $np$**
+
+### Variance
+$$\text{Var}(X) = E\left[ (X - \mu_X)^2 \right]$$
+$$\text{Var}(X) = E[X^2] - \mu_X^2$$
+
+### Standard deviation
+$$\sigma_X = \sqrt{\text{Var}(X)}$$
+
+### PMF들의 Var(X)
+**Bernoulli(p): $p(1-p)$,  Geometric(p): $\frac{1-p}{p^2}$,  Poisson(λ): $\lambda$**  
+**Binomial(n, p): $np(1-p)$, Pascal(m, p): $m\frac{1-p}{p^2}$, Hypergeometric(b, r, n): $np(1 - p) \left(1 - \frac{n - 1}{b + r - 1}\right)$**
+
+### Composite function  
+$$\text{define } Y = g(X) = g \circ X : S \to \mathbb{R}$$  
+$$ R_Y = \{ g(x) \mid x \in R_X \}$$
+
+### Law of the Unconsciout Statistician(LOTUS)
+$E[Y] = E[g(X)] = \sum_{x_k \in R_X} g(x_k) P_X(x_k)$, P(x_k)의 확률을 그대로 가져가면서 x_k만 변경함

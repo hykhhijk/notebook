@@ -4,7 +4,7 @@ minikube version
 # 가상머신 시작
 minikube start --driver=docker
 # 특정 k8s 버전 실행
-minikube start --kubernetes-version=v1.23.1
+minikube start --kubernetes-version=v1.34.0
 
 # 상태확인
 minikube status
